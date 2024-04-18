@@ -9,7 +9,7 @@
 body {
   width: 100vw;
   height: 100vh;
-  background: #0070ff;
+  background: #ff7800;
 }
 .container {
   width: 500px;
@@ -24,22 +24,56 @@ h1 {
   font-size: 2em;
   text-align: center;
   margin-bottom: 1em;
+  font-weight: 400;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+  gap: 0.8em;
 }
 input {
-  width: 65%;
-  padding: 1em;
   outline: none;
-  border: 1px solid #000;
-  border-radius: 0.7em;
+  border: unset;
+  padding: 1em 0;
+  border-bottom: 2px solid #fff;
+  color: #172039;
+  font-weight: 400;
+}
+input:focus {
+  border-bottom: 2px solid #ff7800;
 }
 button {
-  width: 33%;
   padding: 1em;
   font-size: 0.8em;
   border-radius: 0.7em;
   outline: none;
-  background: #0070ff;
+  background: #ff7800;
   color: #fff;
   border: none;
   cursor: pointer;
+}
+p {
+  color: #fff;
+  font-size: 0.7em;
+  padding: 0.8em 0;
+  transition: 0.5s;
+  text-align: center;
+  margin-top: 2em;
+  border-radius: 0.7em;
+}
+.success {
+  background-color: #2db42d;
+  animation: pop 0.4s;
+}
+.error {
+  background-color: #b42d2d;
+  animation: pop 0.4s;
+}
+@keyframes pop {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
